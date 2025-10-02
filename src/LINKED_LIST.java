@@ -63,6 +63,7 @@ public class LINKED_LIST {
 
           LLR.Delete(1);
           LLR.Disply();
+          LLR.Disply();
     }
 
 }
