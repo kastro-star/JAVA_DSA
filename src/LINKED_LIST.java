@@ -82,6 +82,14 @@ public class LINKED_LIST {
         temp.data=val;
 
     }
+    public void deleteAtend(){
+        Node temp =head;
+        while(temp.next.next != null){
+            temp=temp.next;
+        }
+        temp.next=null;
+
+    }
 
 
     public static void main(String[] args) {
@@ -95,6 +103,13 @@ public class LINKED_LIST {
           LLR.get(1);
           LLR.update(1,1000000);
           LLR.get(1);
+          LLR.deleteAtend();
+          LLR.Disply();
+          LLR.insertAtBeg(4310);
+          LLR.insertAtBeg(410);
+        LLR.Disply();
+          LLR.deleteAtend();
+          LLR.Disply();
     }
 
 }
