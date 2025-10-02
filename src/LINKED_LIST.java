@@ -34,17 +34,17 @@ public class LINKED_LIST {
         }
     }
     public void insertAtPosition(int pos,int val){
-        Node newnode =new Node(val);
+        Node newnode =new Node(val);  //create new node
         if(pos ==0){
-            insertAtBeg(val);
+            insertAtBeg(val);   // position is 0th element call the insertat begginng method
             return;
         }
         Node temp =head;
         for(int i=1;i<pos;i++){
-            temp=temp.next;
+            temp=temp.next;      //search for the previous node of the postion node
         }
-        newnode.next =temp.next;
-        temp.next=newnode;
+        newnode.next =temp.next;    //assign the new nodes next value is previous(next) --the newnodes neat
+        temp.next=newnode;          //previous nodes next is our new node (assign the values carefully)
     }
     public void Delete(int pos){
         if(head == null){
@@ -65,16 +65,23 @@ public class LINKED_LIST {
     public void get(int pos){
         Node temp=head;
         if(pos == 0){
-            System.out.println(temp.data);
+            System.out.println(temp.data);  //handle the position 0
             return;
         }
         for(int i=1;i<pos;i++){
             temp = temp.next;
         }
-        System.out.print(temp.data);
+        System.out.println(temp.data);   //get the value of the certained index node
 
     }
+    public void update(int pos,int val){
+        Node temp=head;
+        for(int i=1;i<pos;i++){
+            temp=temp.next;
+        }
+        temp.data=val;
 
+    }
 
 
     public static void main(String[] args) {
@@ -85,7 +92,9 @@ public class LINKED_LIST {
           LLR.Disply();
           LLR.Delete(0);
           LLR.Disply();
-          LLR.get(2);
+          LLR.get(1);
+          LLR.update(1,1000000);
+          LLR.get(1);
     }
 
 }
