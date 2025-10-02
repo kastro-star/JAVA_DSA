@@ -90,6 +90,27 @@ public class LINKED_LIST {
         temp.next=null;
 
     }
+    public int  Search(int value){
+        Node temp=head;
+        while (temp.next != null){
+            if(temp.data == value){
+                return temp.data;
+            }
+            temp=temp.next;
+        }
+        return -1;
+    }
+    public boolean contains(int value){
+        Node temp=head;
+        while(temp.next !=null){
+            if(temp.data == value){
+                return true;
+            }
+            temp =temp.next;
+        }
+        return false;
+    }
+
 
 
     public static void main(String[] args) {
@@ -108,8 +129,11 @@ public class LINKED_LIST {
           LLR.insertAtBeg(4310);
           LLR.insertAtBeg(410);
         LLR.Disply();
-          LLR.deleteAtend();
+         // LLR.deleteAtend();
           LLR.Disply();
+          System.out.println(LLR.Search(410));
+          System.out.println(LLR.contains(4310));
+          LLR.contains(4310);
     }
 
 }
