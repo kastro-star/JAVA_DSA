@@ -35,6 +35,10 @@ public class LINKED_LIST {
     }
     public void insertAtPosition(int pos,int val){
         Node newnode =new Node(val);
+        if(pos ==0){
+            insertAtBeg(val);
+            return;
+        }
         Node temp =head;
         for(int i=1;i<pos;i++){
             temp=temp.next;
@@ -43,6 +47,13 @@ public class LINKED_LIST {
         temp.next=newnode;
     }
     public void Delete(int pos){
+        if(head == null){
+            throw new IndexOutOfBoundsException(pos);
+        }
+        if(pos == 0){
+            head =head.next;
+            return;
+        }
         Node temp = head; //for pos node save
         Node prev = null; //for previous node of position node
         for(int i=1;i<=pos;i++){  //jump untill node to be detected
@@ -51,6 +62,20 @@ public class LINKED_LIST {
         }
         prev.next=temp.next;    //assign the pointers like (position's previous node with the positions next node)
     }
+    public void get(int pos){
+        Node temp=head;
+        if(pos == 0){
+            System.out.println(temp.data);
+            return;
+        }
+        for(int i=1;i<pos;i++){
+            temp = temp.next;
+        }
+        System.out.print(temp.data);
+
+    }
+
+
 
     public static void main(String[] args) {
           LINKED_LIST LLR =new LINKED_LIST();
@@ -58,12 +83,9 @@ public class LINKED_LIST {
           LLR.insertAtBeg(10);
           LLR.insertAtPosition(2,69);
           LLR.Disply();
-          LLR.insertAtPosition(1,6969);
+          LLR.Delete(0);
           LLR.Disply();
-
-          LLR.Delete(1);
-          LLR.Disply();
-          LLR.Disply();
+          LLR.get(2);
     }
 
 }
