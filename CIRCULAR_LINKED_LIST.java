@@ -3,7 +3,7 @@ import com.sun.jdi.PathSearchingVirtualMachine;
 import javax.xml.transform.Source;
 
 class circularlinkedlist{
-    Node last;
+    Node last;   // reference variable contains the address(pointer ) of the last node (use last.next )is the first node
     class Node{
         String data;
         Node next;
@@ -87,3 +87,4 @@ public class CIRCULAR_LINKED_LIST {
 
     }
 }
+
