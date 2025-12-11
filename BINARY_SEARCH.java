@@ -5,7 +5,17 @@
 
 
 // BINARY SEARCH
+             // BEST SUITBALE FOR SMALLER BIGGER ARRAYS O(LOG N)
 
+                    //BEST CASE -- DIECTLY FOUND THE TARGET IN THE MID  -- O(1)
+                    //AVERAGE CASE : O(LOG N)
+                    //WORST CASE:
+                        // ✔ O(log n)
+
+                        // Binary Search reduces the search space by half each time:
+                        // n → n/2 → n/4 → n/8 → ... → 1
+                        // Number of steps ≈ log₂(n)
+                        //SO O(LOG N)
 
 
 class search{
@@ -267,3 +277,4 @@ public class BINARY_SEARCH{
 //    }
 
 //}
+
