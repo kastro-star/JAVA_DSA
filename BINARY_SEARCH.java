@@ -1,3 +1,13 @@
+//BINARY SEARCH IS ONE OF THE BEST SEARCH BECAUSE ITS 
+//TIME COMPLEXITY IS O(LOG N) 
+//LINEAR SEARCH TIME COMPLEXITY IS O(N) -- ITERATE THROUGH ALL THE ELEMENTS IN THE UNTILL FIND THE ELEMENT IT DOES NO SUITABLE FOR BIGGER LIKE 1000000 INDEXES ;
+// SO BINEARY SERCH IS THE BEST THAT NOT ITERATE THROUGH ALL SO ITS RUN IN O(LOG N)
+
+
+// BINARY SEARCH
+
+
+
 class search{
     public static int ascendingsearch(int[] arr ,int target){   // binary search (find the target in the ascending wise sorted array
         int start =0,end = arr.length - 1;        // start and end values of the array
@@ -255,4 +265,5 @@ public class BINARY_SEARCH{
 //        }
 //        return start;                      start and end will be the same you will return any answer will point at the answer(largest element in the array)
 //    }
+
 //}
